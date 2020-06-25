@@ -35,8 +35,8 @@
 
 <body>
     <div id="app">
-        <g-button icon="setting">张三</g-button>
-        <g-button>我爱宝可梦</g-button>
+        <g-button icon="setting" :loading="loading1" @click="loading1=!loading1">张三</g-button>
+        <g-button :loading="loading2" @click="loading2 = !loading2">我爱宝可梦</g-button>
         <g-button icon="setting" icon-position="right">李旭</g-button>
     </div>
 
