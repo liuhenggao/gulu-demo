@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import "./svg";
 export default {
   name: "g-icon",
   props: {
@@ -13,7 +14,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .g-icon {
   height: 1em;
   width: 1em;

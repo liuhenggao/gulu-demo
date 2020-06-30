@@ -35,6 +35,13 @@
 
 <body>
     <div id="app">
+        <div style="margin: 12px 0">
+            <g-input v-model="message" disabled></g-input>
+            <g-input v-model="message" readonly></g-input>
+            <g-input v-model="message" error="请输入汉字"></g-input>
+            <g-input v-model="message" @change="inputChange"></g-input>
+        </div>
+
         <g-button icon="setting" :loading="loading1" @click="loading1=!loading1">张三</g-button>
         <g-button :loading="loading2" @click="loading2 = !loading2">我爱宝可梦</g-button>
         <g-button icon="setting" icon-position="right">李旭</g-button>
@@ -49,7 +56,6 @@
     </div>
 
     <script src="./src/app.js"></script>
-    <script src="//at.alicdn.com/t/font_1288993_garuy4o88lq.js"></script>
 </body>
 
 </html>
