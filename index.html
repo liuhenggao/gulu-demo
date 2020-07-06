@@ -35,6 +35,45 @@
 
 <body>
     <div id="app">
+        <div>
+            <g-row>
+                <g-col>lixu</g-col>
+                <g-col>shaq</g-col>
+            </g-row>
+            <g-row aligns="center">
+                <g-col>lixu</g-col>
+                <g-col>shaq</g-col>
+                <g-col>shaq</g-col>
+            </g-row>
+            <g-row>
+                <g-col>lixu</g-col>
+                <g-col>shaq</g-col>
+                <g-col>shaq</g-col>
+                <g-col>shaq</g-col>
+            </g-row>
+            <g-row>
+                <g-col span="4">lixu</g-col>
+                <g-col span="18" offset="2">shaq</g-col>
+            </g-row>
+            <g-row>
+                <g-col span="4" :xs='{span:1,offset:5}' :sm='{span:2,offset:4}' :lg='{span:5,offset:1}'
+                    :md='{span:3,offset:3}'>
+                    lixu</g-col>
+                <g-col span="4" :xs='{span:1,offset:5}' :sm='{span:2,offset:4}' :lg="{span:5,offset:1}"
+                    :md='{span:3,offset:3}'>
+                    shaq
+                </g-col>
+                <g-col span="4" :xs='{span:1,offset:5}' :sm='{span:2,offset:4}' :lg="{span:5,offset:1}"
+                    :md='{span:3,offset:3}'>
+                    lixu
+                </g-col>
+                <g-col span="4" :xs='{span:1,offset:5}' :sm='{span:2,offset:4}' :lg="{span:5,offset:1}"
+                    :md='{span:3,offset:3}'>
+                    shaq
+                </g-col>
+            </g-row>
+        </div>
+        <hr>
         <div style="margin: 12px 0">
             <g-input v-model="message" disabled></g-input>
             <g-input v-model="message" readonly></g-input>
@@ -52,7 +91,10 @@
 
             <g-button icon="right" icon-position="right"></g-button>
         </g-button-group>
-        <div id="test"></div>
+        <div style="margin: 12px 0">
+            <hr>
+        </div>
+
     </div>
 
     <script src="./src/app.js"></script>

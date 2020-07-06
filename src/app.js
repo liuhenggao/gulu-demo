@@ -3,6 +3,8 @@ import button from './button'
 import Icon from './icon'
 import buttonGroup from './button-group'
 import Input from './input'
+import Row from './row'
+import Col from './col'
 import { assert } from 'chai'
 
 new Vue({
@@ -18,7 +20,9 @@ new Vue({
         'g-button': button,
         'g-icon': Icon,
         'g-button-group': buttonGroup,
-        'g-input': Input
+        'g-input': Input,
+        'g-row': Row,
+        'g-col': Col
     },
     methods: {
         inputChange(e) {
