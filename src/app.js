@@ -1,11 +1,19 @@
 import Vue from 'vue'
+import plugin from './plugin'
 import button from './button'
 import Icon from './icon'
 import buttonGroup from './button-group'
 import Input from './input'
 import Row from './row'
 import Col from './col'
+import Layout from './layout'
+import Header from './header'
+import Content from './content'
+import Footer from './footer'
+import Sider from './sider'
+import Toast from './toast'
 import { assert } from 'chai'
+Vue.use(plugin)
 
 new Vue({
     el: '#app',
@@ -22,7 +30,13 @@ new Vue({
         'g-button-group': buttonGroup,
         'g-input': Input,
         'g-row': Row,
-        'g-col': Col
+        'g-col': Col,
+        'g-layout': Layout,
+        'g-header': Header,
+        'g-content': Content,
+        'g-footer': Footer,
+        'g-sider': Sider,
+        'g-toast': Toast
     },
     methods: {
         inputChange(e) {
@@ -30,6 +44,23 @@ new Vue({
         },
         input(e) {
             this.message = e
+        },
+        log() {
+            console.log('lll');
+        },
+        toast() {
+            let array = ['center', 'top', 'bottom']
+            let index = Math.floor(parseInt(Math.random() * 3))
+            console.log(index);
+
+            this.$toast(`欢迎光临${parseInt(Math.random() * 100)}点点`, {
+                closeDelay: 2,
+                autoClose: false,
+                position: array[index],
+                closeButton: {
+                    text: '关闭'
+                }
+            })
         }
     },
 })

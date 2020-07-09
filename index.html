@@ -31,68 +31,60 @@
             font-size: var(--font-size);
         }
     </style>
+    <style>
+        .demo1 {
+            background-color: rgba(51, 159, 247, 0.295);
+            color: #fff;
+        }
+
+        .demo2 {
+            background-color: rgba(51, 159, 247, 0.562);
+            color: #fff;
+        }
+
+        .demo3 {
+            background-color: rgba(51, 159, 247, 0.904);
+            color: #fff;
+        }
+
+        .demo4 {
+            background-color: rgba(7, 101, 241, 0.397);
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
     <div id="app">
-        <div>
-            <g-row>
-                <g-col>lixu</g-col>
-                <g-col>shaq</g-col>
-            </g-row>
-            <g-row aligns="center">
-                <g-col>lixu</g-col>
-                <g-col>shaq</g-col>
-                <g-col>shaq</g-col>
-            </g-row>
-            <g-row>
-                <g-col>lixu</g-col>
-                <g-col>shaq</g-col>
-                <g-col>shaq</g-col>
-                <g-col>shaq</g-col>
-            </g-row>
-            <g-row>
-                <g-col span="4">lixu</g-col>
-                <g-col span="18" offset="2">shaq</g-col>
-            </g-row>
-            <g-row>
-                <g-col span="4" :xs='{span:1,offset:5}' :sm='{span:2,offset:4}' :lg='{span:5,offset:1}'
-                    :md='{span:3,offset:3}'>
-                    lixu</g-col>
-                <g-col span="4" :xs='{span:1,offset:5}' :sm='{span:2,offset:4}' :lg="{span:5,offset:1}"
-                    :md='{span:3,offset:3}'>
-                    shaq
-                </g-col>
-                <g-col span="4" :xs='{span:1,offset:5}' :sm='{span:2,offset:4}' :lg="{span:5,offset:1}"
-                    :md='{span:3,offset:3}'>
-                    lixu
-                </g-col>
-                <g-col span="4" :xs='{span:1,offset:5}' :sm='{span:2,offset:4}' :lg="{span:5,offset:1}"
-                    :md='{span:3,offset:3}'>
-                    shaq
-                </g-col>
-            </g-row>
-        </div>
-        <hr>
         <div style="margin: 12px 0">
             <g-input v-model="message" disabled></g-input>
             <g-input v-model="message" readonly></g-input>
             <g-input v-model="message" error="请输入汉字"></g-input>
             <g-input v-model="message" @change="inputChange"></g-input>
         </div>
+        <div style="margin:12px 0">
+            <g-button icon="setting" :loading="loading1" @click="loading1=!loading1">张三</g-button>
+            <g-button :loading="loading2" @click="loading2 = !loading2">我爱宝可梦</g-button>
+            <g-button icon="setting" icon-position="right">李旭</g-button>
+            <g-button-group>
+                <g-button icon="left"></g-button>
 
-        <g-button icon="setting" :loading="loading1" @click="loading1=!loading1">张三</g-button>
-        <g-button :loading="loading2" @click="loading2 = !loading2">我爱宝可梦</g-button>
-        <g-button icon="setting" icon-position="right">李旭</g-button>
-        <g-button-group>
-            <g-button icon="left"></g-button>
+                <g-button @click="toast">更多</g-button>
 
-            <g-button>更多</g-button>
+                <g-button icon="right" icon-position="right"></g-button>
+            </g-button-group>
+        </div>
 
-            <g-button icon="right" icon-position="right"></g-button>
-        </g-button-group>
-        <div style="margin: 12px 0">
-            <hr>
+        <hr>
+        <div style="margin: 12px">
+            <g-layout style=" height: 400px">
+                <g-sider width="100px" class="demo1">sider</g-sider>
+                <g-layout>
+                    <g-header height="50px" class="demo2">header</g-header>
+                    <g-content height="300px" class="demo3">content</g-content>
+                    <g-footer height="50px" class="demo4">footer</g-footer>
+                </g-layout>
+            </g-layout>
         </div>
 
     </div>

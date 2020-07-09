@@ -1,22 +1,22 @@
 <template>
-  <div class="header" ref="header">
+  <div class="sider" ref="sider">
     <slot></slot>
   </div>
 </template>
 <script>
 export default {
-  name: "g-header",
+  name: "g-sider",
   props: {
-    height: {
+    width: {
       type: String
     }
   },
   mounted() {
-    this.$refs.header.style.height = this.height;
+    this.$refs.sider.style.width = this.width;
   }
 };
 </script>
 <style lang="scss" scoped>
-.header {
+.sider {
 }
 </style>
