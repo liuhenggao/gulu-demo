@@ -49,14 +49,9 @@ new Vue({
             console.log('lll');
         },
         toast() {
-            let array = ['center', 'top', 'bottom']
-            let index = Math.floor(parseInt(Math.random() * 3))
-            console.log(index);
-
             this.$toast(`欢迎光临${parseInt(Math.random() * 100)}点点`, {
-                closeDelay: 2,
                 autoClose: false,
-                position: array[index],
+                position: 'bottom',
                 closeButton: {
                     text: '关闭'
                 }
